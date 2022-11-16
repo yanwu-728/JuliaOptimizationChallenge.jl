@@ -1,0 +1,3 @@
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+JuliaOptimizationChallenge = "9ba1bbbe-3db7-4b37-b4f9-ee5e44b79e74"
