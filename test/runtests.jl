@@ -2,5 +2,5 @@ using JuliaOptimizationChallenge
 using Test
 
 @testset "JuliaOptimizationChallenge.jl" begin
-    # Write your tests here.
+    added_function(1,2)
 end

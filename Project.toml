@@ -1,6 +1,6 @@
 name = "JuliaOptimizationChallenge"
 uuid = "9ba1bbbe-3db7-4b37-b4f9-ee5e44b79e74"
-authors = ["yanwu-728 <74961465+yanwu-728@users.noreply.github.com>, danvil <69361955+DVILL17@users.noreply.github.com>"]
+authors = ["yanwu-728 <74961465+yanwu-728@users.noreply.github.com>, danvil <69361955+DVILL17@users.noreply.github.com>, qhzhang"]
 version = "0.1.0"
 
 [deps]
