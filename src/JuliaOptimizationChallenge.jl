@@ -7,7 +7,7 @@
 #    This may have bad interactions with precompilation.
 # 3) You are importing/using a package which has precompilation disabled
 
-__precompile__()
+#__precompile__()
 
 # If you are not going to precompile your package, it's good practice to disable it:
 # __precompile__(false)
