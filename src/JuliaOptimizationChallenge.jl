@@ -17,7 +17,7 @@ module JuliaOptimizationChallenge
 # The main module file is for outlining the structure of the package.
 # At the top of your package module, you should import your dependencies:
 
-using Compat
+#using Compat
 
 # Then define your abstract types:
 
@@ -32,11 +32,11 @@ using Compat
 # Note: You should try to keep exports to a minimum. Exports are the public API:
 # internal functionality should not be exported!
 
-
-export added_function, added_function2
+added_function2(x,y) = x+2*y
+#export added_function, added_function2
 
 # Now include the real code
 # Write your code in other files, otherwise the package outline gets muddled
 
-include("my_test_file.jl")
+#include("my_test_file.jl")
 end # module
