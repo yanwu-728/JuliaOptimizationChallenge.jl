@@ -32,11 +32,11 @@ using Compat
 # Note: You should try to keep exports to a minimum. Exports are the public API:
 # internal functionality should not be exported!
 
-#export added_function
+export added_function
 
 # Now include the real code
 # Write your code in other files, otherwise the package outline gets muddled
 
 #include("my_test_file.jl")
-added_function(x,y) = x+y
+added_function2(x,y) = x+y
 end # module
