@@ -33,10 +33,10 @@ using Compat
 # internal functionality should not be exported!
 
 
-export added_function,added_function2
+export added_function, added_function2
 
 # Now include the real code
 # Write your code in other files, otherwise the package outline gets muddled
 
-#include("my_test_file.jl")
+include("my_test_file.jl")
 end # module
