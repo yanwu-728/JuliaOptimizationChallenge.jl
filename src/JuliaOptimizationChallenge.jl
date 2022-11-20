@@ -7,7 +7,7 @@
 #    This may have bad interactions with precompilation.
 # 3) You are importing/using a package which has precompilation disabled
 
-__precompile__()
+#__precompile__()
 
 # If you are not going to precompile your package, it's good practice to disable it:
 # __precompile__(false)
@@ -17,7 +17,7 @@ module JuliaOptimizationChallenge
 # The main module file is for outlining the structure of the package.
 # At the top of your package module, you should import your dependencies:
 
-using Compat
+#using Compat
 
 # Then define your abstract types:
 
@@ -32,11 +32,11 @@ using Compat
 # Note: You should try to keep exports to a minimum. Exports are the public API:
 # internal functionality should not be exported!
 
-export added_function
+#export added_function
 
 # Now include the real code
 # Write your code in other files, otherwise the package outline gets muddled
 
-include("my_test_file.jl")
-
+#include("my_test_file.jl")
+added_function(x,y) = x+y
 end # module
