@@ -17,7 +17,7 @@ module JuliaOptimizationChallenge
 # The main module file is for outlining the structure of the package.
 # At the top of your package module, you should import your dependencies:
 
-#using Compat
+using Compat
 
 # Then define your abstract types:
 
