@@ -12,7 +12,7 @@ __precompile__()
 # If you are not going to precompile your package, it's good practice to disable it:
 # __precompile__(false)
 
-module ExamplePackage
+module JuliaOptimizationChallenge
 
 # The main module file is for outlining the structure of the package.
 # At the top of your package module, you should import your dependencies:
