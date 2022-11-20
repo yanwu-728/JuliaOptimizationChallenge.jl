@@ -7,7 +7,7 @@
 #    This may have bad interactions with precompilation.
 # 3) You are importing/using a package which has precompilation disabled
 
-#__precompile__()
+__precompile__()
 
 # If you are not going to precompile your package, it's good practice to disable it:
 # __precompile__(false)
@@ -33,10 +33,10 @@ module JuliaOptimizationChallenge
 # internal functionality should not be exported!
 
 added_function2(x,y) = x+2*y
-#export added_function, added_function2
+export added_function, added_function2
 
 # Now include the real code
 # Write your code in other files, otherwise the package outline gets muddled
 
-#include("my_test_file.jl")
+include("my_test_file.jl")
 end # module
