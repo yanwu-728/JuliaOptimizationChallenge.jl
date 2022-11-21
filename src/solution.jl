@@ -37,9 +37,9 @@ function solution()
     
     if isfile("../solution/solution.txt")
         HashCode2014.write_solution(HashCode2014.Solution(itineraries), "../solution/solution.txt")
-    else 
-        touch("../solution/solution.txt")
-        HashCode2014.write_solution(HashCode2014.Solution(itineraries), "../solution/solution.txt")
+    # else 
+    #     touch("../solution/solution.txt")
+    #     HashCode2014.write_solution(HashCode2014.Solution(itineraries), "../solution/solution.txt")
     end
     println("Total distance: ", HashCode2014.total_distance(HashCode2014.Solution(itineraries), city))
     println("Total_duration: ", total_duration)
