@@ -32,7 +32,7 @@ module JuliaOptimizationChallenge
 # Note: You should try to keep exports to a minimum. Exports are the public API:
 # internal functionality should not be exported!
 
-export added_function, added_function2, solution
+export added_function, added_function2, solution,evaluate_performance
 
 # Now include the real code
 # Write your code in other files, otherwise the package outline gets muddled
