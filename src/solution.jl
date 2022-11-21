@@ -35,8 +35,8 @@ function solution()
         itineraries[car] = itinerary
     end
     
-    if isfile("../solution/solution.txt")
-        HashCode2014.write_solution(HashCode2014.Solution(itineraries), "../solution/solution.txt")
+    # if isfile("../solution/solution.txt")
+    #     HashCode2014.write_solution(HashCode2014.Solution(itineraries), "../solution/solution.txt")
     # else 
     #     touch("../solution/solution.txt")
     #     HashCode2014.write_solution(HashCode2014.Solution(itineraries), "../solution/solution.txt")
