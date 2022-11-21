@@ -32,7 +32,6 @@ module JuliaOptimizationChallenge
 # Note: You should try to keep exports to a minimum. Exports are the public API:
 # internal functionality should not be exported!
 
-added_function2(x,y) = x+2*y
 export added_function, added_function2
 
 # Now include the real code
