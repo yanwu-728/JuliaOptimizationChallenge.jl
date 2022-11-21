@@ -43,8 +43,8 @@ function solution()
     #end
     println("Total distance: ", HashCode2014.total_distance(HashCode2014.Solution(itineraries), city))
     println("Total_duration: ", total_duration)
-    #HashCode2014.plot_streets(city, HashCode2014.Solution(itineraries); path="../solution/solution.html")
+    HashCode2014.plot_streets(city, HashCode2014.Solution(itineraries); path="../solution/solution.html")
 end
 
-@benchmark solution()
+#@benchmark solution()
 
