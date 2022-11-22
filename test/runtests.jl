@@ -2,6 +2,7 @@ using Aqua
 using JuliaOptimizationChallenge
 using Test
 using HashCode2014
+using JuliaFormatter
 
 @testset  begin
     solution()
@@ -22,21 +23,6 @@ end
     # @testset verbose = true "Doctests (Documenter.jl)" begin
     #     doctest(JuliaOptimizationChallenge)
     # end
-
-    @testset verbose = true "Small instance" begin
-        input_path = joinpath(@__DIR__, "data", "example_input.txt")
-        output_path = joinpath(@__DIR__, "data", "example_output.txt")
-        city = HashCode2014.read_city(input_path)
-        solution = HashCode2014.read_solution(output_path)
-        open(input_path, "r") do file
-            @test string(city) == read(file, String)
-        end
-        open(output_path, "r") do file
-            @test string(solution) == read(file, String)
-        end
-        @test is_feasible(solution, city)
-        @test total_distance(solution, city) == 450
-    end
 
     @testset verbose = true "Large instance" begin
         city = HashCode2014.read_city()

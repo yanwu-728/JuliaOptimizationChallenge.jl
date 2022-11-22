@@ -1,8 +1,7 @@
 using HashCode2014
 using BenchmarkTools
 
-function solution()
-    city = HashCode2014.read_city()
+function solution(city)
     (; total_duration, nb_cars, starting_junction, streets) = city
     itineraries = Vector{Vector{Int}}(undef, nb_cars)
     visited = Set()
