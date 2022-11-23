@@ -33,5 +33,6 @@ function solution(city)
         end
         itineraries[car] = itinerary
     end
+    return HashCode2014.Solution(itineraries)
 end
 

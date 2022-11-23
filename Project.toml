@@ -10,7 +10,7 @@ Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
 JuliaFormater = "98e50ef6-434e-11e9-1051-2b60c6c9e899"
 
 [compat]
-julia = "1.8"
+julia = "1.8.3"
 BenchmarkTools = "1.3.2"
 HashCode2014 = "0.1.0"
 JuliaFormater = "1.0.15"
