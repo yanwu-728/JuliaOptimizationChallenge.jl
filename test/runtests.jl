@@ -3,6 +3,7 @@ using JuliaOptimizationChallenge
 using Test
 using HashCode2014
 using JuliaFormatter
+using Documenter
 
 @testset verbose = true "JuliaOptimizationChallenge.jl" begin
     @testset verbose = true "Code quality (Aqua.jl)" begin
