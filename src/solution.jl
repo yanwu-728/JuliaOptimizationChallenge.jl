@@ -2,6 +2,13 @@ using HashCode2014
 using BenchmarkTools
 
 function solution(city)
+    """
+    Find a possible solution of itineraries for each car, given a city object
+
+    input: city object with total_duration, nb_cars, starting_junction, and streets values
+
+    output: a set of itineraries for each of the cars
+    """
     (; total_duration, nb_cars, starting_junction, streets) = city
     itineraries = Vector{Vector{Int}}(undef, nb_cars)
     visited = Set()
