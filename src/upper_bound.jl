@@ -4,10 +4,6 @@ using HashCode2014
     compute_upper_bound()
 
 Calculate an upper bound on the number of meters that can be covered
-
-input: nothing
-
-output: nothing yet
 """
 function compute_upper_bound()
     city = HashCode2014.read_city()
