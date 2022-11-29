@@ -2,11 +2,13 @@ using HashCode2014
 #using BenchmarkTools
 
 """
-    Find a possible solution of itineraries for each car, given a city object
+    solution(city)
 
-    input: city object with total_duration, nb_cars, starting_junction, and streets values
+Find a possible solution of itineraries for each car, given a city object
 
-    output: a set of itineraries for each of the cars
+input: city object with total_duration, nb_cars, starting_junction, and streets values
+
+output: a set of itineraries for each of the cars
 """
 function solution(city)
     (; total_duration, nb_cars, starting_junction, streets) = city

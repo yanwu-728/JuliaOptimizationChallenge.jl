@@ -1,11 +1,13 @@
 using HashCode2014
 
 """
-    Calculate an upper bound on the number of meters that can be covered
+    compute_upper_bound()
 
-    input: nothing
+Calculate an upper bound on the number of meters that can be covered
 
-    output: nothing yet
+input: nothing
+
+output: nothing yet
 """
 function compute_upper_bound()
     city = HashCode2014.read_city()
