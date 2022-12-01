@@ -1,6 +1,6 @@
 using HashCode2014
 
-"""
+"""@docs
     solution(city)
 
 Find a possible solution of itineraries for each car, given a city object

@@ -1,6 +1,6 @@
 using HashCode2014
 
-"""
+"""@docs
     compute_upper_bound()
 
 Calculate an upper bound on the number of meters that can be covered
