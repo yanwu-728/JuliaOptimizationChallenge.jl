@@ -21,5 +21,5 @@ makedocs(;
 
 deploydocs(;
     repo="github.com/yanwu-728/JuliaOptimizationChallenge.jl",
-    devbranch="master",
+    devbranch="main",
 )
