@@ -1,5 +1,4 @@
 using HashCode2014
-#using BenchmarkTools
 
 """
     solution(city)
