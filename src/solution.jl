@@ -1,12 +1,10 @@
 using HashCode2014
 
 """@docs
-    solution(city)
-
 Find a possible solution of itineraries for each car, given a city object
 
 # Arguments
-    - 'city': a City object from HashCode2014
+    - 'city': a City object from HashCode2014.jl
 
 # Output
     - a set of itineraries for each of the cars
