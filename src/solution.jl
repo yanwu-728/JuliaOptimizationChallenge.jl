@@ -6,9 +6,11 @@ using HashCode2014
 
 Find a possible solution of itineraries for each car, given a city object
 
-input: city object with total_duration, nb_cars, starting_junction, and streets values
+# Arguments
+    - 'city': a City object from HashCode2014
 
-output: a set of itineraries for each of the cars
+# Output
+    - a set of itineraries for each of the cars
 """
 function solution(city)
     (; total_duration, nb_cars, starting_junction, streets) = city
