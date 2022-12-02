@@ -12,11 +12,9 @@ using Documenter
     #     Aqua.test_all(JuliaOptimizationChallenge; ambiguities=false)
     # end
 
-    # Skip formatting test for now
-
-    # @testset verbose = true "Code formatting (JuliaFormatter.jl)" begin
-    #     @test format(JuliaOptimizationChallenge; verbose=true, overwrite=false)
-    # end
+    @testset verbose = true "Code formatting (JuliaFormatter.jl)" begin
+        @test format(JuliaOptimizationChallenge; verbose=true, overwrite=false)
+    end
 
     @testset verbose = true "Doctests (Documenter.jl)" begin
         doctest(JuliaOptimizationChallenge)
