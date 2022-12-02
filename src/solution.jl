@@ -1,5 +1,3 @@
-using HashCode2014
-
 """@docs
 solution(city)
 """
