@@ -1,10 +1,16 @@
 using HashCode2014
 
 """@docs
-Calculate an upper bound on the number of meters that can be covered
+compute_upper_bound(city)
 """
-function compute_upper_bound()
-    city = HashCode2014.read_city()
+
+"""
+Calculate an upper bound on the number of meters that can be covered
+
+# Arguments
+    - 'city': a City object from HashCode2014.jl
+"""
+function compute_upper_bound(city)
     (; total_duration, nb_cars, starting_junction, streets) = city
     itineraries = Vector{Vector{Int}}(undef, nb_cars)
     return
