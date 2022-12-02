@@ -40,7 +40,6 @@ export evaluate_performance
 # Now include the real code
 # Write your code in other files, otherwise the package outline gets muddled
 
-include("my_test_file.jl")
 include("solution.jl")
 include("upper_bound.jl")
 #include("evaluation.jl")
