@@ -35,14 +35,14 @@ using Documenter
 
     @testset verbose = true "Large instance" begin
         city = read_city()
-        solution = JuliaOptimizationChallengesolution(city)
+        solution = JuliaOptimizationChallenge.solution(city)
         @test city.total_duration == 54000
         @test is_feasible(solution, city)
     end
 
     @testset verbose = true "Plotting" begin
         city = read_city()
-        solution = JuliaOptimizationChallengesolution(city)
+        solution = JuliaOptimizationChallenge.solution(city)
         plot_streets(city, solution; path=nothing)
     end
 end
