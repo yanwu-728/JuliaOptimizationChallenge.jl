@@ -18,11 +18,9 @@ using Documenter
     #     @test format(JuliaOptimizationChallenge; verbose=true, overwrite=false)
     # end
 
-    # Skiping doc test for now
-
-    # @testset verbose = true "Doctests (Documenter.jl)" begin
-    #     doctest(JuliaOptimizationChallenge)
-    # end
+    @testset verbose = true "Doctests (Documenter.jl)" begin
+        doctest(JuliaOptimizationChallenge)
+    end
 
     @testset verbose = true "Small instance" begin
         input_path = joinpath(@__DIR__, "data", "example_input.txt")
