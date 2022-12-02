@@ -32,6 +32,8 @@ module JuliaOptimizationChallenge
 # Note: You should try to keep exports to a minimum. Exports are the public API:
 # internal functionality should not be exported!
 
+using HashCode2014
+
 export solution
 export evaluate_performance
 
