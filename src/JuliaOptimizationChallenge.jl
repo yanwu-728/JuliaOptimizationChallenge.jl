@@ -34,13 +34,13 @@ module JuliaOptimizationChallenge
 
 using HashCode2014
 
-export solution
+export solver
 export evaluate_performance
 
 # Now include the real code
 # Write your code in other files, otherwise the package outline gets muddled
 
-include("solution.jl")
+include("solver.jl")
 include("upper_bound.jl")
 #include("evaluation.jl")
 end # module

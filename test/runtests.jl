@@ -22,21 +22,21 @@ using Documenter
         input_path = joinpath(@__DIR__, "data", "example_input.txt")
         output_path = joinpath(@__DIR__, "data", "example_output.txt")
         city = read_city(input_path)
-        solution = JuliaOptimizationChallenge.solution(city)
+        solution = JuliaOptimizationChallenge.solver(city)
         @test is_feasible(solution, city)
         @test total_distance(solution, city) == 450
     end
 
     @testset verbose = true "Large instance" begin
         city = read_city()
-        solution = JuliaOptimizationChallenge.solution(city)
+        solution = JuliaOptimizationChallenge.solver(city)
         @test city.total_duration == 54000
         @test is_feasible(solution, city)
     end
 
     @testset verbose = true "Plotting" begin
         city = read_city()
-        solution = JuliaOptimizationChallenge.solution(city)
+        solution = JuliaOptimizationChallenge.solver(city)
         plot_streets(city, solution; path=nothing)
     end
 end
