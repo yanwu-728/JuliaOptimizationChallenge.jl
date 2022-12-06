@@ -14,7 +14,7 @@ Store a problem which represents a city using a matrix and other parameters
 -junctions::Vector{Junction}: list of junctions
 -adjacency::Vector{Vector{Street}}: list where ith entry is all the streets that you can travel through from ith junction
 """
-struct Problem
+Base.@kwdef struct Problem
     total_duration::Int
     nb_cars::Int
     starting_junction::Int
