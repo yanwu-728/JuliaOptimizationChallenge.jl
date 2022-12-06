@@ -7,7 +7,7 @@ Problem(city)
 Store a problem which represents a city using a matrix and other parameters
 
 # Fields
-     total_duration::Int: total time allotted for the car itineraries (in seconds)
+    - total_duration::Int: total time allotted for the car itineraries (in seconds)
     - nb_cars::Int: number of cars in the fleet
     - starting_junction::Int: junction at which all the cars are located initially
     - junctions::Vector{Junction}: list of junctions

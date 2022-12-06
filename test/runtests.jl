@@ -6,13 +6,13 @@ using JuliaFormatter
 using Documenter
 
 @testset verbose = true "JuliaOptimizationChallenge.jl" begin
-    # @testset verbose = true "Code quality (Aqua.jl)" begin
-    #     Aqua.test_all(JuliaOptimizationChallenge; ambiguities=false)
-    # end
+    @testset verbose = true "Code quality (Aqua.jl)" begin
+        Aqua.test_all(JuliaOptimizationChallenge; ambiguities=false)
+    end
 
-    # @testset verbose = true "Code formatting (JuliaFormatter.jl)" begin
-    #     @test format(JuliaOptimizationChallenge; verbose=true, overwrite=false)
-    # end
+    @testset verbose = true "Code formatting (JuliaFormatter.jl)" begin
+        @test format(JuliaOptimizationChallenge; verbose=true, overwrite=false)
+    end
 
     @testset verbose = true "Doctests (Documenter.jl)" begin
         doctest(JuliaOptimizationChallenge)
