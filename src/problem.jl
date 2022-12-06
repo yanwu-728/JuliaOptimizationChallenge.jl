@@ -27,7 +27,7 @@ Creates a Problem instance using a HashCode2014.jl City object
 """
 function Problem(city::City)
     J = length(city.junctions)
-    A = Vector{Vector{Street}}(undef,J)
+    A = Vector{Vector{Any}}([],J)
 
     for street in city.streets
         (;endpointA,endpointB,bidirectional,duration,distance) = street
