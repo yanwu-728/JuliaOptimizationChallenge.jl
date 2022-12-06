@@ -12,7 +12,7 @@ Store a problem which represents a city using a matrix and other parameters
 -nb_cars::Int: number of cars in the fleet
 -starting_junction::Int: junction at which all the cars are located initially
 -junctions::Vector{Junction}: list of junctions
--adjacency::Matrix{Float}: matrix where (i,j)th entry is the shortest cost (in seconds) street from junction i to juncion j
+-adjacency::Vector{Vector{Street}} list where ith entry is all the streets that you can travel through from ith junction
 """
 struct Problem
     total_duration::Int
@@ -27,7 +27,7 @@ Creates a Problem instance using a HashCode2014.jl City object
 """
 function Problem(city::City)
     J = size(city.junctions)
-    A = Vector{Vector{Float}}([],J)
+    A = Vector{Vector{Street}}([],J)
 
     for street in city.streets
         (;endpointA,endpointB,bidirectional,duration,distance) = street
