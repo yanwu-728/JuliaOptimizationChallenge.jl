@@ -48,7 +48,7 @@ function Problem(city::City)
     problem = Problem(;
         total_duration=city.total_duration,
         nb_cars=city.nb_cars,
-        start=city.starting_junction,
+        starting_junction=city.starting_junction,
         junctions=city.junctions,
         adjacency=A
     )
