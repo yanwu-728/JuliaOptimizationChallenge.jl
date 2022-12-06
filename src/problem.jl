@@ -32,13 +32,13 @@ function Problem(city::City)
     for street in city.streets
         (;endpointA,endpointB,bidirectional,duration,distance) = street
         if !isdefined(A, endpointA)
-            A[endpointA] = Vector{Street}([street],1)
+            A[endpointA] = [street]
         else
             A[endpointA].append!([street])
         end
         if bidirectional
             if !isdefined(A, endpointB)
-                A[endpointB] = Vector{Street}([street],1)
+                A[endpointB] = [street]
             else
                 A[endpointB].append!([street])
             end
