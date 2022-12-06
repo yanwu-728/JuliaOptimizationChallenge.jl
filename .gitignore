@@ -3,4 +3,5 @@
 *.jl.mem
 /docs/build/
 .CondaPkg
+.vscode
 solution

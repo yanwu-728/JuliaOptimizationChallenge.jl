@@ -1,18 +1,15 @@
 """@docs
-solver(city)
+solver(problem)
 """
 
 """
-Find a possible solution of itineraries for each car, given a city object
-
-# Arguments
-    - 'city': a City object from HashCode2014.jl
+Find a possible solution of itineraries for each car, given a problem instance
 
 # Output
     - a set of itineraries for each of the cars
 """
-function solver(city)
-    (; total_duration, nb_cars, starting_junction, streets) = city
+function solver(problem)
+    (; total_duration, nb_cars, starting_junction, adjacency) = problem
     itineraries = Vector{Vector{Int}}(undef, nb_cars)
     visited = Set()
     for car in 1:nb_cars
@@ -21,8 +18,7 @@ function solver(city)
         while true
             current_junction = last(itinerary)
             candidates = [
-                (s, street) for (s, street) in enumerate(streets) if (
-                    HashCode2014.is_street_start(current_junction, street) &&
+                (s, street) for (s, street) in enumerate(adjacency[current_junction]) if (
                     duration + street.duration <= total_duration
                 )
             ]
