@@ -27,17 +27,17 @@ Creates a Problem instance using a HashCode2014.jl City object
 """
 function Problem(city::City)
     J = length(city.junctions)
-    A = Vector{Vector{Street}}([],J)
+    A = Vector{Vector{Street}}(undef,J)
 
     for street in city.streets
         (;endpointA,endpointB,bidirectional,duration,distance) = street
-        if A[endpointA]==[]
+        if !isdefined(A,endpointA)
             A[endpointA] = [street]
         else
             A[endpointA].append!([street])
         end
         if bidirectional
-            if A[endpointB]==[]
+            if !isdefined(A,endpointB)
                 A[endpointB] = [street]
             else
                 A[endpointB].append!([street])

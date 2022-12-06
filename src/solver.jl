@@ -11,7 +11,7 @@ Find a possible solution of itineraries for each car, given a problem instance
 function solver(problem)
     (; total_duration, nb_cars, starting_junction, adjacency) = problem
     itineraries = Vector{Vector{Int}}(undef, nb_cars)
-    visited = Set()
+    visited = Set{Street}()
     for car in 1:nb_cars
         itinerary = [starting_junction]
         duration = 0
