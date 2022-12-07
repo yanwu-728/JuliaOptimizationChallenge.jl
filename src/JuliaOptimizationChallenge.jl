@@ -33,10 +33,6 @@ module JuliaOptimizationChallenge
 # internal functionality should not be exported!
 
 using HashCode2014
-using Aqua
-using JuliaFormatter
-using Documenter
-# using BenchmarkTools
 
 export solver
 export Problem
