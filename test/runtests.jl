@@ -31,7 +31,6 @@ using Documenter
     @testset verbose = true "Large instance" begin
         city = read_city()
         problem = JuliaOptimizationChallenge.Problem(city)
-        # println(problem.adjacency)
         solution = JuliaOptimizationChallenge.solver(problem)
         @test city.total_duration == 54000
         @test is_feasible(solution, city)
@@ -41,6 +40,6 @@ using Documenter
         city = read_city()
         problem = JuliaOptimizationChallenge.Problem(city)
         solution = JuliaOptimizationChallenge.solver(problem)
-        plot_streets(city, solution; path=nothing)
+        HashCode2014.plot_streets(city, solution; path=nothing)
     end
 end
