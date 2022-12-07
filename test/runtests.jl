@@ -40,6 +40,6 @@ using Documenter
         city = read_city()
         problem = JuliaOptimizationChallenge.Problem(city)
         solution = JuliaOptimizationChallenge.solver(problem)
-        HashCode2014.plot_streets(city, solution; path=nothing)
+        plot_streets(city, solution; path=nothing)
     end
 end
