@@ -34,7 +34,7 @@ function solver(problem)
                 next_junction = HashCode2014.get_street_end(current_junction, street)
                 push!(itinerary, next_junction)
                 push!(visited, street)
-                
+
                 duration += street.duration
             end
         end
