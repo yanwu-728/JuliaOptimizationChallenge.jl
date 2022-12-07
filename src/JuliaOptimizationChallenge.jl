@@ -35,7 +35,7 @@ module JuliaOptimizationChallenge
 using HashCode2014
 
 export solver
-export problem
+#export problem
 
 # Now include the real code
 # Write your code in other files, otherwise the package outline gets muddled
