@@ -9,6 +9,7 @@ function compute_upper_bound(city)
     #Make an upper bound that depends on the parameters of the problem like time allowed, number of cars, ...
     #Can be anything as long as you justify a proof for this that you include in documentation
     bound = 0
+    #total_duration, nb_cars, starting_junction, streets
     (; total_duration, nb_cars, starting_junction, streets) = city
     for street in streets
         bound += street.distance
