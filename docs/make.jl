@@ -1,7 +1,12 @@
 using JuliaOptimizationChallenge
 using Documenter
 
-DocMeta.setdocmeta!(JuliaOptimizationChallenge, :DocTestSetup, :(using JuliaOptimizationChallenge); recursive=true)
+DocMeta.setdocmeta!(
+    JuliaOptimizationChallenge,
+    :DocTestSetup,
+    :(using JuliaOptimizationChallenge);
+    recursive=true,
+)
 
 makedocs(;
     modules=[JuliaOptimizationChallenge],
@@ -14,12 +19,7 @@ makedocs(;
         edit_link="master",
         assets=String[],
     ),
-    pages=[
-        "Home" => "index.md",
-    ],
+    pages=["Home" => "index.md"],
 )
 
-deploydocs(;
-    repo="github.com/yanwu-728/JuliaOptimizationChallenge.jl",
-    devbranch="main",
-)
+deploydocs(; repo="github.com/yanwu-728/JuliaOptimizationChallenge.jl", devbranch="main")

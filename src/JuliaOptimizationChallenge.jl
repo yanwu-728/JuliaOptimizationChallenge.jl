@@ -7,7 +7,7 @@
 #    This may have bad interactions with precompilation.
 # 3) You are importing/using a package which has precompilation disabled
 
-#__precompile__()
+# __precompile__()
 
 # If you are not going to precompile your package, it's good practice to disable it:
 # __precompile__(false)
@@ -35,7 +35,7 @@ module JuliaOptimizationChallenge
 using HashCode2014
 
 export solver
-#export problem
+export Problem
 
 # Now include the real code
 # Write your code in other files, otherwise the package outline gets muddled

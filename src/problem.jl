@@ -25,23 +25,24 @@ Creates a Problem instance using a HashCode2014.jl City object
 """
 function Problem(city::City)
     J = length(city.junctions)
-    A = Vector{Vector{Street}}(undef,J)
-    for i =1:length(A)
+    A = Vector{Vector{Street}}(undef, J)
+    for i in 1:length(A)
         A[i] = []
     end
     for street in city.streets
-        (;endpointA,endpointB,bidirectional,duration,distance) = street
-        push!(A[endpointA],street)
+        (; endpointA, endpointB, bidirectional, duration, distance) = street
+        push!(A[endpointA], street)
         if bidirectional
-            push!(A[endpointB],street)
+            push!(A[endpointB], street)
         end
     end
-    
-    problem = Problem(;total_duration=city.total_duration,
-                    nb_cars=city.nb_cars,
-                    starting_junction=city.starting_junction,
-                    junctions=city.junctions,
-                    adjacency=A
-                    )
+
+    problem = Problem(;
+        total_duration=city.total_duration,
+        nb_cars=city.nb_cars,
+        starting_junction=city.starting_junction,
+        junctions=city.junctions,
+        adjacency=A,
+    )
     return problem
 end
