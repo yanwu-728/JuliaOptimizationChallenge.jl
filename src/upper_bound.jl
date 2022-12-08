@@ -8,8 +8,7 @@ compute_upper_bound(city)
 Calculate an upper bound on the number of meters that can be covered using a HashCode2014.jl City instance
 """
 function compute_upper_bound(city)
-    # Make an upper bound that depends on the parameters of the problem like time allowed, number of cars, ...
-    # Can be anything as long as you justify a proof for this that you include in documentation
+    # Justify a proof for this that you include in documentation
     # Idea: Calculate the total duration and distance of all of the streets. If total duration>allowed*nb_cars, remove duration 
     # and distance from the slowest streets (i.e. smalles distance/time)
     upper_bound = 0
