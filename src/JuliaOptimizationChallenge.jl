@@ -32,17 +32,27 @@ module JuliaOptimizationChallenge
 # Note: You should try to keep exports to a minimum. Exports are the public API:
 # internal functionality should not be exported!
 
+<<<<<<< Updated upstream
 using HashCode2014
 
 export Problem
 export solver
 export compute_upper_bound
+=======
+export itinerary_solution
+>>>>>>> Stashed changes
 
 # Now include the real code
 # Write your code in other files, otherwise the package outline gets muddled
 
+<<<<<<< Updated upstream
 include("problem.jl")
 include("solver.jl")
 include("upper_bound.jl")
 
+=======
+include("my_test_file.jl")
+include("itinerary_solution.jl")
+include("upper_bound.jl")
+>>>>>>> Stashed changes
 end # module

@@ -5,15 +5,21 @@ using HashCode2014
 using JuliaFormatter
 
 @testset verbose = true "JuliaOptimizationChallenge.jl" begin
-    # Skip quality check for now
+    @testset verbose = true "Code quality (Aqua.jl)" begin
+        Aqua.test_all(JuliaOptimizationChallenge; ambiguities=false)
+    end
 
-    # @testset verbose = true "Code quality (Aqua.jl)" begin
-    #     Aqua.test_all(JuliaOptimizationChallenge; ambiguities=false)
-    # end
-
+<<<<<<< Updated upstream
     @testset verbose = true "Code formatting (JuliaFormatter.jl)" begin
         @test format(JuliaOptimizationChallenge; verbose=true, overwrite=false)
     end
+=======
+    # Skip formatting test for now
+
+    # @testset verbose = true "Code formatting (JuliaFormatter.jl)" begin
+    #     @test format(JuliaOptimizationChallenge; verbose=true, overwrite=false)
+    # end
+>>>>>>> Stashed changes
 
     @testset verbose = true "Doctests (Documenter.jl)" begin
         doctest(JuliaOptimizationChallenge)
