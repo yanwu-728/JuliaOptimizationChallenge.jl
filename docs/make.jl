@@ -19,7 +19,7 @@ makedocs(;
         edit_link="master",
         assets=String[],
     ),
-    pages=["Home" => "index.md"],
+    pages=["Home" => "index.md","Explanation" => "newindex.md"],
 )
 
 deploydocs(; repo="github.com/yanwu-728/JuliaOptimizationChallenge.jl", devbranch="main")
