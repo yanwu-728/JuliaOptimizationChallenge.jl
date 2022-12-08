@@ -7,7 +7,7 @@
 #    This may have bad interactions with precompilation.
 # 3) You are importing/using a package which has precompilation disabled
 
-#__precompile__()
+# __precompile__()
 
 # If you are not going to precompile your package, it's good practice to disable it:
 # __precompile__(false)
@@ -32,14 +32,17 @@ module JuliaOptimizationChallenge
 # Note: You should try to keep exports to a minimum. Exports are the public API:
 # internal functionality should not be exported!
 
-export solution
-export evaluate_performance
+using HashCode2014
+
+export Problem
+export solver
+export compute_upper_bound
 
 # Now include the real code
 # Write your code in other files, otherwise the package outline gets muddled
 
-include("my_test_file.jl")
-include("solution.jl")
+include("problem.jl")
+include("solver.jl")
 include("upper_bound.jl")
-include("evaluation.jl")
+
 end # module

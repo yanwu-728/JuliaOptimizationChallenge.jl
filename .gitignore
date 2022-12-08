@@ -3,3 +3,7 @@
 *.jl.mem
 /docs/build/
 .CondaPkg
+.vscode
+solution
+codecov.exe
+test/playground.jl
