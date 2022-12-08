@@ -32,7 +32,8 @@ using Documenter
         city = read_city()
         problem = JuliaOptimizationChallenge.Problem(city)
         solution = JuliaOptimizationChallenge.solver(problem)
-        @test total_distance(solution, city) <= JuliaOptimizationChallenge.compute_upper_bound(city)
+        @test total_distance(solution, city) <=
+            JuliaOptimizationChallenge.compute_upper_bound(city)
         @test city.total_duration == 54000
         @test is_feasible(solution, city)
     end
