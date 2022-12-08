@@ -38,10 +38,10 @@ using Documenter
         @test is_feasible(solution, city)
     end
 
-    @testset verbose = true "Plotting" begin
-        city = read_city()
-        problem = JuliaOptimizationChallenge.Problem(city)
-        solution = JuliaOptimizationChallenge.solver(problem)
-        plot_streets(city, solution; path=nothing)
-    end
+    # @testset verbose = true "Plotting" begin
+    #     city = read_city()
+    #     problem = JuliaOptimizationChallenge.Problem(city)
+    #     solution = JuliaOptimizationChallenge.solver(problem)
+    #     plot_streets(city, solution; path=nothing)
+    # end
 end
