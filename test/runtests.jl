@@ -23,7 +23,7 @@ using Documenter
         output_path = joinpath(@__DIR__, "data", "example_output.txt")
         city = read_city(input_path)
         problem = JuliaOptimizationChallenge.Problem(city)
-        solution = JuliaOptimizationChallenge.solver(problem)
+        solution = JuliaOptimizationChallenge.solver_parallel_lookforward(problem)
         @test is_feasible(solution, city)
         @test total_distance(solution, city) == 450
     end
@@ -36,33 +36,12 @@ using Documenter
             JuliaOptimizationChallenge.compute_upper_bound(city)
         @test city.total_duration == 54000
         @test is_feasible(solution, city)
-        # HashCode2014.write_solution(solution, "../solution/solution.txt")
-        # println("Total distance: ", HashCode2014.total_distance(solution, city))
-        # HashCode2014.plot_streets(city, solution; path="../solution/solution.html")
-
-    end
-
-    @testset verbose = true "Large instance and less time" begin
-        city1 = read_city()
-        city = City(;
-            total_duration=18000,
-            nb_cars=city1.nb_cars,
-            starting_junction=city1.starting_junction,
-            junctions=city1.junctions,
-            streets=city1.streets,
-        )
-        problem = JuliaOptimizationChallenge.Problem(city)
-        solution = JuliaOptimizationChallenge.solver(problem)
-        @test total_distance(solution, city) <=
-            JuliaOptimizationChallenge.compute_upper_bound(city)
-        @test city.total_duration == 18000
-        @test is_feasible(solution, city)
     end
 
     @testset verbose = true "Plotting" begin
         city = read_city()
         problem = JuliaOptimizationChallenge.Problem(city)
-        solution = JuliaOptimizationChallenge.solver(problem)
+        solution = JuliaOptimizationChallenge.solver_parallel_lookforward(problem)
         plot_streets(city, solution; path=nothing)
     end
 end

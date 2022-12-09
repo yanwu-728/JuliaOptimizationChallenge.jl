@@ -28,7 +28,6 @@ using HashCode2014
 # internal functionality should not be exported!
 
 export Problem
-export solver
 export compute_upper_bound
 export solver_parallel_lookforward
 
@@ -36,7 +35,6 @@ export solver_parallel_lookforward
 # Write your code in other files, otherwise the package outline gets muddled
 
 include("problem.jl")
-include("solver.jl")
 include("solver_parallel_lookforward.jl")
 include("upper_bound.jl")
 
