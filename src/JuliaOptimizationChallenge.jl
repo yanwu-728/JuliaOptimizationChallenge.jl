@@ -38,7 +38,6 @@ export solver_parallel_lookforward
 include("problem.jl")
 include("solver.jl")
 include("solver_parallel_lookforward.jl")
-
 include("upper_bound.jl")
 
 end # module
