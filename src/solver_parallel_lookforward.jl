@@ -3,7 +3,7 @@ solver_parallel_lookforward(problem)
 """
 
 """
-Find all possible paths at certain junction, with the current visited street.
+Helper function that finds all possible paths at certain junction, with the current visited street.
 # Output
     - the optimal path at N steps
 """
