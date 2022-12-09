@@ -31,11 +31,15 @@ using Documenter
     @testset verbose = true "Large instance" begin
         city = read_city()
         problem = JuliaOptimizationChallenge.Problem(city)
-        solution = JuliaOptimizationChallenge.solver(problem)
+        @time solution = JuliaOptimizationChallenge.solver_parallel_lookforward(problem)
         @test total_distance(solution, city) <=
             JuliaOptimizationChallenge.compute_upper_bound(city)
         @test city.total_duration == 54000
         @test is_feasible(solution, city)
+        # HashCode2014.write_solution(solution, "../solution/solution.txt")
+        # println("Total distance: ", HashCode2014.total_distance(solution, city))
+        # HashCode2014.plot_streets(city, solution; path="../solution/solution.html")
+
     end
 
     @testset verbose = true "Large instance and less time" begin

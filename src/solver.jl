@@ -20,16 +20,21 @@ function solver(problem)
                 (s, street) for (s, street) in enumerate(adjacency[current_junction]) if
                 (duration + street.duration <= total_duration)
             ]
+            #evaluate 
+            
             if isempty(candidates)
                 break
             else
                 not_visited = [
                     (s, street) for (s, street) in candidates if (!(street in visited))
                 ]
+                not_visited_meter_per_second = [
+                            street.distance for (s, street) in not_visited
+                ]
                 if isempty(not_visited)
                     s, street = rand(candidates)
                 else
-                    s, street = rand(not_visited)
+                    s, street = not_visited[argmax(not_visited_meter_per_second)]
                 end
                 next_junction = HashCode2014.get_street_end(current_junction, street)
                 push!(itinerary, next_junction)
