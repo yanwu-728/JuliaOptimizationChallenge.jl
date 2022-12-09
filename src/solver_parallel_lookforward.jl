@@ -1,5 +1,6 @@
 """@docs
-solver(problem)
+solver_parallel_lookforward(problem)
+find_lookforward_paths_parallel(initial_junction,visited,adjacency,steps)
 """
 
 """
@@ -75,7 +76,6 @@ function solver_parallel_lookforward(problem)
                 (duration[car] + street.duration <= total_duration)
             ]
             #evaluate 
-
             if isempty(candidates)
                 flag[car] = 1 # labels that the car is run out of the time
                 continue
@@ -94,8 +94,8 @@ function solver_parallel_lookforward(problem)
                     )
 
                     selected_street = first(path)
-                    if selected_street in visited
-                        #s, selected_street = not_visited[argmax(not_visited_meter_per_second)]
+                    if duration[car] + selected_street.duration > total_duration ||
+                        selected_street in visited
                         s, selected_street = rand(not_visited)
                     end
                 end
@@ -114,7 +114,6 @@ function solver_parallel_lookforward(problem)
             break
         end
     end
-    #itineraries[car] = itinerary
 
     return HashCode2014.Solution(itineraries)
 end
