@@ -9,8 +9,8 @@ Find all possible paths at certain junction, with the current visited street.
 """
 function find_lookforward_paths_parallel(initial_junction, visited, adjacency, steps)
     paths = Vector{Vector{Street}}()
-    current_junctions = []
-    path_distance = []
+    current_junctions = Vector{Int32}()
+    path_distance = Vector{Float64}()
     # initiate the path and junctions
     for (s, street) in enumerate(adjacency[initial_junction])
         push!(paths, [street])
@@ -27,8 +27,8 @@ function find_lookforward_paths_parallel(initial_junction, visited, adjacency, s
         old_junctions = current_junctions
         old_path_distance = path_distance
         paths = Vector{Vector{Street}}()
-        current_junctions = []
-        path_distance = []
+        current_junctions = Vector{Int32}()
+        path_distance = Vector{Float64}()
         for idx in 1:length(old_paths)
             for (s, street) in enumerate(adjacency[old_junctions[idx]])
                 update_old_path = reverse(append!([street], reverse(old_paths[idx])))
