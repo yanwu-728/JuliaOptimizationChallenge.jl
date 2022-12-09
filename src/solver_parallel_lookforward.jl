@@ -8,7 +8,7 @@ Find all possible paths at certain junction, with the current visited street.
     - the optimal path at N steps
 """
 function find_lookforward_paths_parallel(initial_junction, visited, adjacency, steps)
-    paths = []
+    paths = Vector{Vector{Street}}()
     current_junctions = []
     path_distance = []
     # initiate the path and junctions
@@ -26,12 +26,12 @@ function find_lookforward_paths_parallel(initial_junction, visited, adjacency, s
         old_paths = paths
         old_junctions = current_junctions
         old_path_distance = path_distance
-        paths = []
+        paths = Vector{Vector{Street}}()
         current_junctions = []
         path_distance = []
         for idx in 1:length(old_paths)
             for (s, street) in enumerate(adjacency[old_junctions[idx]])
-                update_old_path = reverse(append!([street], reverse(old_paths[idx]))) #[]
+                update_old_path = reverse(append!([street], reverse(old_paths[idx])))
                 push!(paths, update_old_path)
                 push!(
                     current_junctions,
@@ -47,7 +47,7 @@ function find_lookforward_paths_parallel(initial_junction, visited, adjacency, s
     end
     max_distance_idx = argmax(path_distance)
     if path_distance[max_distance_idx] == 0
-        return []
+        return Vector{Street}()
     end
     return paths[max_distance_idx]
 end
