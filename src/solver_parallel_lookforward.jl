@@ -76,7 +76,6 @@ function solver_parallel_lookforward(problem)
                 (duration[car] + street.duration <= total_duration)
             ]
             #evaluate 
-
             if isempty(candidates)
                 flag[car] = 1 # labels that the car is run out of the time
                 continue

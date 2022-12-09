@@ -20,6 +20,8 @@ function solver(problem)
                 (s, street) for (s, street) in enumerate(adjacency[current_junction]) if
                 (duration + street.duration <= total_duration)
             ]
+            #evaluate 
+            
             if isempty(candidates)
                 break
             else
