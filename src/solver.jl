@@ -21,6 +21,7 @@ function solver(problem)
                 (duration + street.duration <= total_duration)
             ]
             #evaluate
+
             if isempty(candidates)
                 break
             else
