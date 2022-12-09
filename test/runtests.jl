@@ -59,6 +59,6 @@ using Documenter
         city = read_city()
         problem = JuliaOptimizationChallenge.Problem(city)
         solution = JuliaOptimizationChallenge.solver_parallel_lookforward(problem)
-        @test plot_streets(city, solution; path=nothing)
+        plot_streets(city, solution; path=nothing)
     end
 end
