@@ -10,6 +10,11 @@ that the last junction the car is at.
 
 The algorithm we used is...
 
+### Efficiency
+
+- Assign a type for any collection of elements that we created
+- Used push! and append! to add to vectors without creating a new vector
+
 ## Upper Bound
 
 ### Description
@@ -22,13 +27,6 @@ Let OPT be some optimal solution for the upper bound problem. Assume for contrad
 ### Runtime
 The algorithm takes O(nlogn) time where n is the number of streets. Sorting the streets by the speed takes O(nlogn) time, and the greedy algorithm of traversing each street and take the distance takes O(n) time. 
 
-## Efficiency
-
-### Solver Algorithm
-
-- Assign a type for any collection of elements that we created
-- Some choiced we made to improve efficiency were...
-
-### Upper Bound
+### Efficiency
 
 - used sort! to sort in place instead of creating a new vector
