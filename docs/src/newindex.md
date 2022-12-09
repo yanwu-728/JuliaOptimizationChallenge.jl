@@ -1,5 +1,10 @@
 # JuliaOptimizationChallenge
 
+## Data Structure
+We modified the original data structure from HashCode2014.jl to store additional information.
+In particular, the streets now could be stored in an adjacency list, which allows one to easily have access to all the outgoing streets
+given a junction. This will be particularly useful if we would like to make a comparision among different options a car could take given
+that the last junction the car is at.
 
 ## Solver Algorithm
 
