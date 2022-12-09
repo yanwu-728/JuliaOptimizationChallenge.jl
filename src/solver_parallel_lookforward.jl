@@ -82,9 +82,6 @@ function solver_parallel_lookforward(problem)
                 not_visited = [
                     (s, street) for (s, street) in candidates if (!(street in visited))
                 ]
-                not_visited_meter_per_second = [
-                    street.distance for (s, street) in not_visited
-                ]
                 if isempty(not_visited)
                     s, selected_street = rand(candidates)
                 else
