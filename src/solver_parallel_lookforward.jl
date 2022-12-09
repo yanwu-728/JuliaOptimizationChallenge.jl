@@ -1,12 +1,11 @@
 """@docs
 solver_parallel_lookforward(problem)
-find_lookforward_paths_parallel(initial_junction,visited,adjacency,steps)
 """
 
 """
 Find all possible paths at certain junction, with the current visited street.
 # Output
-    The optimal path at N steps
+    - the optimal path at N steps
 """
 function find_lookforward_paths_parallel(initial_junction, visited, adjacency, steps)
     paths = []
