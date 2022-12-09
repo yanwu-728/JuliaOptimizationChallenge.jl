@@ -27,7 +27,7 @@ function solver(problem)
                     (s, street) for (s, street) in candidates if (!(street in visited))
                 ]
                 not_visited_meter_per_second = [
-                            street.distance for (s, street) in not_visited
+                    street.distance for (s, street) in not_visited
                 ]
                 if isempty(not_visited)
                     s, street = rand(candidates)
