@@ -94,7 +94,8 @@ function solver_parallel_lookforward(problem)
                     )
 
                     selected_street = first(path)
-                    if selected_street in visited
+                    if duration[car] + selected_street.duration > total_duration ||
+                        selected_street in visited
                         s, selected_street = rand(not_visited)
                     end
                 end
