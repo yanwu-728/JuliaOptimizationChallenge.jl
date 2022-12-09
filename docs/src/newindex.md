@@ -26,6 +26,7 @@ The algorithm takes O(nlogn) time where n is the number of streets. Sorting the 
 
 ### Solver Algorithm
 
+- Assign a type for any collection of elements that we created
 - Some choiced we made to improve efficiency were...
 
 ### Upper Bound
