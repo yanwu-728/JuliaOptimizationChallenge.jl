@@ -15,7 +15,6 @@ function compute_upper_bound(city)
     time = 0
     (; total_duration, nb_cars, starting_junction, streets) = city
     sort!(streets; by=street -> street.distance / street.duration, rev=true)
-    total_duration = 18000
     for street in streets
         time += street.duration
         if time < total_duration * nb_cars
