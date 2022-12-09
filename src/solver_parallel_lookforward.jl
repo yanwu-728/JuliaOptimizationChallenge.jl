@@ -94,7 +94,6 @@ function solver_parallel_lookforward(problem)
                 
                 selected_street = first(path)
                 if selected_street in visited
-                    #s, selected_street = not_visited[argmax(not_visited_meter_per_second)]
                     s, selected_street = rand(not_visited)
                 end    
             
@@ -113,8 +112,6 @@ function solver_parallel_lookforward(problem)
             break
         end
     end
-    #itineraries[car] = itinerary
-
 
     return HashCode2014.Solution(itineraries)
 end
