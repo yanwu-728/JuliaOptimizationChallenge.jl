@@ -17,12 +17,7 @@ module JuliaOptimizationChallenge
 # The main module file is for outlining the structure of the package.
 # At the top of your package module, you should import your dependencies:
 
-#using Compat
-
-# Then define your abstract types:
-
-#abstract AbstractMyType
-#abstract AbstractMyType2 <: AbstractMyType
+using HashCode2014
 
 # Some people make sure all export statements are at the top of the main module as well
 # Only values which are exported enter the namespace, anything else must be
@@ -31,8 +26,6 @@ module JuliaOptimizationChallenge
 
 # Note: You should try to keep exports to a minimum. Exports are the public API:
 # internal functionality should not be exported!
-
-using HashCode2014
 
 export Problem
 export solver
