@@ -17,6 +17,9 @@ function compute_upper_bound(city)
         if time < total_duration * nb_cars
             upper_bound += street.distance
         else
+            upper_bound +=
+                street.distance * (total_duration * nb_cars - (time - street.duration)) /
+                street.duration
             break
         end
     end
