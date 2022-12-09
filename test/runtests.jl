@@ -40,7 +40,13 @@ using Documenter
 
     @testset verbose = true "Large instance and less time" begin
         city1 = read_city()
-        city = City(;total_duration=18000,nb_cars=city1.nb_cars,starting_junction=city1.starting_junction,junction=city1.junctions,streets=city1.streets)
+        city = City(;
+            total_duration=18000,
+            nb_cars=city1.nb_cars,
+            starting_junction=city1.starting_junction,
+            junction=city1.junctions,
+            streets=city1.streets,
+        )
         problem = JuliaOptimizationChallenge.Problem(city)
         solution = JuliaOptimizationChallenge.solver(problem)
         @test total_distance(solution, city) <=
