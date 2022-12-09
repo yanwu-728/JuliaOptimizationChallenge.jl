@@ -29,16 +29,12 @@ using HashCode2014
 
 export Problem
 export solver_parallel_lookforward
-export solver
 export compute_upper_bound
-export solver_parallel_lookforward
 
 # Now include the real code
 # Write your code in other files, otherwise the package outline gets muddled
 
 include("problem.jl")
-include("solver_parallel_lookforward.jl")
-include("solver.jl")
 include("solver_parallel_lookforward.jl")
 include("upper_bound.jl")
 
