@@ -23,7 +23,7 @@ using Documenter
         output_path = joinpath(@__DIR__, "data", "example_output.txt")
         city = read_city(input_path)
         problem = JuliaOptimizationChallenge.Problem(city)
-        solution = JuliaOptimizationChallenge.solver(problem)
+        solution = JuliaOptimizationChallenge.solver_parallel_lookforward(problem)
         @test is_feasible(solution, city)
         @test total_distance(solution, city) == 450
     end
@@ -31,7 +31,7 @@ using Documenter
     @testset verbose = true "Large instance" begin
         city = read_city()
         problem = JuliaOptimizationChallenge.Problem(city)
-        solution = JuliaOptimizationChallenge.solver(problem)
+        solution = JuliaOptimizationChallenge.solver_parallel_lookforward(problem)
         @test total_distance(solution, city) <=
             JuliaOptimizationChallenge.compute_upper_bound(city)
         @test city.total_duration == 54000
@@ -48,34 +48,17 @@ using Documenter
             streets=city1.streets,
         )
         problem = JuliaOptimizationChallenge.Problem(city)
-        solution = JuliaOptimizationChallenge.solver(problem)
+        solution = JuliaOptimizationChallenge.solver_parallel_lookforward(problem)
         @test total_distance(solution, city) <=
             JuliaOptimizationChallenge.compute_upper_bound(city)
         @test city.total_duration == 18000
         @test is_feasible(solution, city)
     end
 
-    @testset verbose = true "Large instance and less time" begin
-        city1 = read_city()
-        city = City(;
-            total_duration=18000,
-            nb_cars=city1.nb_cars,
-            starting_junction=city1.starting_junction,
-            junction=city1.junctions,
-            streets=city1.streets,
-        )
+    @testset verbose = true "Plotting" begin
+        city = read_city()
         problem = JuliaOptimizationChallenge.Problem(city)
         solution = JuliaOptimizationChallenge.solver(problem)
-        @test total_distance(solution, city) <=
-            JuliaOptimizationChallenge.compute_upper_bound(city)
-        @test city.total_duration == 18000
-        @test is_feasible(solution, city)
+        plot_streets(city, solution; path=nothing)
     end
-
-    # @testset verbose = true "Plotting" begin
-    #     city = read_city()
-    #     problem = JuliaOptimizationChallenge.Problem(city)
-    #     solution = JuliaOptimizationChallenge.solver(problem)
-    #     plot_streets(city, solution; path=nothing)
-    # end
 end

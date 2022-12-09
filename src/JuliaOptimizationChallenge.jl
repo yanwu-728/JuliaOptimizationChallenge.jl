@@ -35,6 +35,7 @@ module JuliaOptimizationChallenge
 using HashCode2014
 
 export Problem
+export solver_parallel_lookforward
 export solver
 export compute_upper_bound
 
@@ -42,6 +43,7 @@ export compute_upper_bound
 # Write your code in other files, otherwise the package outline gets muddled
 
 include("problem.jl")
+include("solver_parallel_lookforward.jl")
 include("solver.jl")
 include("upper_bound.jl")
 
