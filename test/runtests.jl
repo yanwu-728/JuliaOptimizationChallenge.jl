@@ -38,6 +38,34 @@ using Documenter
         @test is_feasible(solution, city)
     end
 
+    @testset verbose = true "Large instance and less time" begin
+        city1 = read_city()
+        city = City(;total_duration=18000,nb_cars=city1.nb_cars,starting_junction=city1.starting_junction,junction=city1.junctions,streets=city1.streets)
+        problem = JuliaOptimizationChallenge.Problem(city)
+        solution = JuliaOptimizationChallenge.solver(problem)
+        @test total_distance(solution, city) <=
+            JuliaOptimizationChallenge.compute_upper_bound(city)
+        @test city.total_duration == 18000
+        @test is_feasible(solution, city)
+    end
+
+    @testset verbose = true "Large instance and less time" begin
+        city1 = read_city()
+        city = City(;
+            total_duration=18000,
+            nb_cars=city1.nb_cars,
+            starting_junction=city1.starting_junction,
+            junction=city1.junctions,
+            streets=city1.streets,
+        )
+        problem = JuliaOptimizationChallenge.Problem(city)
+        solution = JuliaOptimizationChallenge.solver(problem)
+        @test total_distance(solution, city) <=
+            JuliaOptimizationChallenge.compute_upper_bound(city)
+        @test city.total_duration == 18000
+        @test is_feasible(solution, city)
+    end
+
     # @testset verbose = true "Plotting" begin
     #     city = read_city()
     #     problem = JuliaOptimizationChallenge.Problem(city)
