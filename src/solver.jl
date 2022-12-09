@@ -5,7 +5,7 @@ solver(problem)
 """
 Find a possible solution of itineraries for each car, given a problem instance
 # Output
-    - a set of itineraries for each of the cars
+    - a set of itineraries for each of the cars in the form of a HashCode2014 Solution
 """
 function solver(problem)
     (; total_duration, nb_cars, starting_junction, adjacency) = problem
