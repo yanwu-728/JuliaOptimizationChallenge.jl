@@ -14,6 +14,7 @@ The algorithm we used is...
 
 - Assign a type for any collection of elements that we created
 - Used push! and append! to add to vectors without creating a new vector
+- Keep track of the junction visited using a set so that we can check if a junction has been visited in constant time
 
 ## Upper Bound
 
@@ -29,4 +30,4 @@ The algorithm takes O(nlogn) time where n is the number of streets. Sorting the 
 
 ### Efficiency
 
-- used sort! to sort in place instead of creating a new vector
+- Used sort! to sort in place instead of creating a new vector
