@@ -8,6 +8,9 @@ that the last junction the car is at.
 
 ## Solver Algorithm
 
+
+### Description
+
 The algorithm we used is the greedy algorithm with looking forward. We optimize all car routines in parallel.
 For each step, we decide if there is any unvisited street. If not, we randomly select one. If so, we will look forward for 8 steps, and get the first step for the optimial path. 
 If the selected street is visited, we will randomly choose another one in the unvisited streets as the next step. If the selected street is not visited, we will choose it as the next step.
