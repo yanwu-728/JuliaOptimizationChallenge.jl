@@ -8,7 +8,6 @@ that the last junction the car is at.
 
 ## Solver Algorithm
 
-
 ### Description
 
 The algorithm we used is the greedy algorithm with looking forward. We optimize all car routines in parallel.
